@@ -1,0 +1,10 @@
+.movie-container {
+    position: relative;
+}
+
+.movie-add-button-container {
+    text-align: center;
+    width: -webkit-fill-available;
+    margin-left: 15px;
+    margin-right: 15px;
+}

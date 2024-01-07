@@ -10,9 +10,8 @@ import '../styles/MovieDetails.css';
 import DateFormatter from "../utility/DateFormatter";
 import MyMoviesAPI from '../api/MyMoviesAPI';
 
-// Path to the request
-const URL_PATH = "/createMovieForUser";
-const API_KEY = "ac4ead2bbde49f3cb342413c09f6d25a";
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 /**
  * Displays details about a movie.
@@ -56,7 +55,6 @@ const MovieDetails = () => {
             ).then(res => {
                 console.log("RES: " + res);
                 if (res.status == 200) {
-                    alert("Movie added successfully.");
                     setWatched(true);
                     fetchMyMovies();
                 }
@@ -74,7 +72,6 @@ const MovieDetails = () => {
         await axiosOwn.delete(MyMoviesAPI.deleteUserMovieURL(movie.id, sessionStorage.getItem("id"))).then(res => {
             console.log(res);
             if (res.status == 200) {
-                alert("Movie removed successfully.");
                 setWatched(false);
                 fetchMyMovies();
             }

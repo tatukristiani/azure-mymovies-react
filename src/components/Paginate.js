@@ -8,14 +8,14 @@ import React from "react";
  * @returns {JSX.Element} ReactPaginate component with some hardcoded attributes except the onPageChange.
  * @constructor Creates Paginate component which is really a Reacts ReactPaginate.
  */
-const Paginate = ({onPageChange}) => {
+const Paginate = ({ onPageChange }) => {
 
     return (
         <ReactPaginate
             previousLabel={'<'}
             nextLabel={'>'}
             breakLabel={'...'}
-            pageCount={7}
+            pageCount={100}
             marginPagesDisplayed={3}
             pageRangeDisplayed={4}
             onPageChange={onPageChange}
