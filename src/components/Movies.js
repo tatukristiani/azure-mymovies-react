@@ -35,13 +35,7 @@ const Movies = () => {
     }, [currentPage])
 
     useEffect(() => {
-        fetchMovies().then(() => {
-            if (!window.location.hash) {
-                console.log("loaded");
-                window.location = window.location + '#loaded';
-                window.location.reload();
-            }
-        })
+        fetchMovies();
     }, [code])
 
     return (
