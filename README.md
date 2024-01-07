@@ -1,8 +1,8 @@
 # My Movies Websoftware project
 
-This project is a school/hobby project that was first designed to run locally but later on made public.  
+Original website was built using React.js + Node.js, this is an updated version that uses .NET instead of Node.js and the API is hosted in Azure.
   
-The URL for the website is -> [My Movies](https://tatukristiani.github.io/mymoviesreact/)
+The URL for the website is -> [My Movies](https://azure-mymovies-react.netlify.app/movies)
 
 # What is My Movies?
 This software is a web application that uses a REST API that utilizes The Movie Databases API to present movies and informations about them.  
@@ -14,25 +14,43 @@ The application provides information about how many movies you've seen so far (a
 
 
 # Technicalities
-This project uses GitHub Pages to deploy the website.  
-This project utilized React.js to build the front-end and also node.js was used in the process.   
-The REST API is hosted on heroku and the source code can be found here -> [REST API](https://github.com/tatukristiani/mymoviesapi)  
-Swagger documentation is also available for the REST API here -> [Swagger Documentation](https://moviesoftwareapi.herokuapp.com/api/api-docs/)   
-**NOTE!** The Swagger document doesn't use a real server for security reasons, but the routes and everything else is correct.
+Backend:
+    - .NET WEB APP
+    - Hosted at Azure
+    - Github: [Github API](https://github.com/tatukristiani/azure-mymovies-api)
+Frontend:
+    - React.js
+    - Hosted at Netlify
+Database:
+    - Azure SQL Server
 
+Azure DevOps was also used during the development and later on CI/CD pipelines will be added (for education).
 
 # Some of the functionalities of the software
-1. **Browse** , here you can browse movies by genre.     
+
+1. **Browse**
+Here you can browse movies by genre.     
 The application shows the movies posters/images and by clicking on them it will take you to a page where you can view some details about the movie and the trailer of the movie.     
-Here you can also add the movie to your list IF you are logged in, since adding movies is only for possible when logged in.      
-2. **My Movies** , here you can view all the movies you've seen/added to your list.    
-It will also tell how much is the total time of those movies and how many movies is in your list.      
-3. **Search** , here you can search movies by their title.     
-If there are movies available with the title you've provided they will show up on the screen and this page follows the same principle as in **Browse** -> click the movie etc.    
-4. **Sign In** , here you can Sign In or Register a new account.   
-The page displays these options clearly, just follow the normal steps as you would on any other website that has a Sign In/Register.    
-5. **Logout** , after you've logged in a "Logout" button will appear and by clicking it you will be logged out.  
-6. **Forgot Password** , in case you forgot your password there is a button located on **Sign In**.    
-First you'll need to provide your accounts email, then you'll receive an email containing a token that you'll have to provide to reset your password, the page where you made the password reset will automatically redirect you to a page where you can insert the token and your new password.  
+Here you can also add the movie to your list IF you are logged in, since adding movies is only for possible when logged in.
+Movies can be also added when browsing with the "Add to My Movies" button.
+
+2. **My Movies**
+Here you can view all the movies you've seen/added to your list.    
+It will tell the spent hours and how many movies you've added to your list.  
+
+3. **Search**
+Here you can search movies by their title.     
+If there are movies available with the title you've provided they'll show up on the screen and this page follows the same principle as in **Browse** -> click the movie etc.   
+
+4. **Sign In**
+Here you can Sign In or Register a new account.   
+The page displays these options clearly, just follow the normal steps as you would on any other website that has a Sign In/Register. 
+
+5. **Logout**
+After you've logged in a "Logout" button will appear and by clicking it you will be logged out. 
+
+6. **Forgot Password**
+In case you forgot your password there is a button located at **Sign In**.    
+First you'll need to provide your accounts email, then you'll receive an email containing a link that will take you to another page on the website where you can reset your password.
 **NOTE! THIS EMAIL MIGHT BE LOCATED IN YOU SPAM SECTION**  
 
