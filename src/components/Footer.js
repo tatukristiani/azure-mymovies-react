@@ -9,14 +9,14 @@ import Logo from '../images/TMDB_Logo.svg';
  */
 const Footer = () => {
 
-    return(
+    return (
         <div className='footer'>
             <div className='creator-details'>
-                <p>Created by Tatu Pulkkinen</p>
+                <p>Created by Tatu</p>
             </div>
             <div className='content-provider-details'>
                 <a href='https://www.themoviedb.org/'>
-                    <img src={Logo} alt='The Movie Database Logo'/>
+                    <img src={Logo} alt='The Movie Database Logo' />
                 </a>
             </div>
         </div>

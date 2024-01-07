@@ -1,15 +1,14 @@
-
 .genre-container {
     text-align: center;
     padding: 10px;
-    margin-top: 40px;
-    margin-left: 130px;
     display: flex;
+    justify-content: center;
 }
 
 .genre-header {
     margin-top: 20px;
 }
+
 .genre-list {
     list-style: none;
     margin-bottom: 30px;
@@ -39,5 +38,12 @@
 @media screen and (max-width: 960px) {
     .genre-header {
         display: none;
+    }
+
+    .genre-list {
+        display: grid;
+        justify-items: start;
+        grid-template-columns: 100px 100px;
+        justify-content: center;
     }
 }
