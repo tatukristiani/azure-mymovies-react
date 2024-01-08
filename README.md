@@ -14,14 +14,13 @@ The application provides information about how many movies you've seen so far (a
 
 
 # Technicalities
-Backend:
+## Backend - Github: [Github API](https://github.com/tatukristiani/azure-mymovies-api)
     - .NET Wep App
     - Hosted at Azure
-    - Github: [Github API](https://github.com/tatukristiani/azure-mymovies-api)
-Frontend:
+## Frontend
     - React.js
     - Hosted at Azure
-Database:
+## Database
     - Azure SQL Server
 
 Azure DevOps was also used during the development and later on CI/CD pipelines will be added (for educational purposes).
