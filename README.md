@@ -1,8 +1,8 @@
 # My Movies Websoftware project
 
-Original website was built using React.js + Node.js, this is an updated version that uses .NET instead of Node.js and the API is hosted in Azure.
+Original website was built using React.js + Node.js, this is an updated version that uses .NET instead of Node.js and for hosting Azure Web Apps was used.
   
-The URL for the website is -> [My Movies](https://azure-mymovies-react.netlify.app/movies)
+The URL for the website is -> [My Movies](https://mymovieonline.azurewebsites.net/)
 
 # What is My Movies?
 This software is a web application that uses a REST API that utilizes The Movie Databases API to present movies and informations about them.  
@@ -15,16 +15,16 @@ The application provides information about how many movies you've seen so far (a
 
 # Technicalities
 Backend:
-    - .NET WEB APP
+    - .NET Wep App
     - Hosted at Azure
     - Github: [Github API](https://github.com/tatukristiani/azure-mymovies-api)
 Frontend:
     - React.js
-    - Hosted at Netlify
+    - Hosted at Azure
 Database:
     - Azure SQL Server
 
-Azure DevOps was also used during the development and later on CI/CD pipelines will be added (for education).
+Azure DevOps was also used during the development and later on CI/CD pipelines will be added (for educational purposes).
 
 # Some of the functionalities of the software
 
