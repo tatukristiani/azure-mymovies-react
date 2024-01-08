@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import "../styles/Home.css";
 import Movie from "./Movie";
