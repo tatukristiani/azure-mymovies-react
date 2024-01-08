@@ -4,11 +4,8 @@ import Movie from "./Movie";
 import { useParams } from "react-router-dom";
 import '../styles/Movies.css';
 import Paginate from "./Paginate";
-import FetchMovies from '../utility/FetchMovies';
 import MyMoviesAPI from '../api/MyMoviesAPI';
 import axios from '../api/axios';
-
-const bcrypt = require('bcryptjs');
 /**
  * List of movies to be shown at page. This is mostly used all around but works only when searching with genre.
  * Need the code param from the url to get succeeded results.
