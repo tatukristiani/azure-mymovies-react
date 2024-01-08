@@ -44,7 +44,7 @@ const Login = () => {
                 setUser('');
                 setPwd('');
 
-                if (res.status == 200) {
+                if (res.status === 200) {
                     const request = async () => {
                         sessionStorage.setItem("id", res.data.id);
                         sessionStorage.setItem("email", res.data.email);

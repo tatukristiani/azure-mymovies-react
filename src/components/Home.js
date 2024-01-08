@@ -22,7 +22,7 @@ const Home = () => {
 
     useEffect(() => {
 
-        let request = axios.get(MyMoviesAPI.getTrendingURL(currentPage)).then(res => {
+        axios.get(MyMoviesAPI.getTrendingURL(currentPage)).then(res => {
             console.log(res.data);
             setMovies(res.data);
         });
