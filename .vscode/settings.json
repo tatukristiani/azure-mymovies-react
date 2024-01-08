@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/29ab5faf-90a7-4d8c-9f5c-6c83f5d566e9/resourceGroups/az-mymovies-rg/providers/Microsoft.Web/sites/mymovieonline",
+    "appService.deploySubpath": "build"
+}
