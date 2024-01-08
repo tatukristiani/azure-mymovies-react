@@ -49,7 +49,7 @@ const ForgotPassword = () => {
         if (validateEmail(email)) {
             await axios.post(MyMoviesAPI.sendResetPasswordLinkURL(email)).then(res => {
                 console.log(res);
-                if (res.status == 200) {
+                if (res.status === 200) {
                     setResponse(res.data);
                 } else {
                     setError(true);
@@ -68,7 +68,7 @@ const ForgotPassword = () => {
         if (password === confirmPassword && validateCredential(password)) {
             await axios.put(MyMoviesAPI.resetPasswordURL(id, EncodeToBase64(password))).then(res => {
                 console.log(res);
-                if (res.status == 200) {
+                if (res.status === 200) {
                     setUpdateResponse(res.data + " " + WAIT_STRING);
                 } else {
                     setUpdateResponse(res.data);

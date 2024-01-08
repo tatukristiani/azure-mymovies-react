@@ -67,7 +67,7 @@ const ProfilePage = () => {
                 headers: { 'Content-Type': 'application/json' }
             }).then(res => {
                 console.log(res);
-                if (res.status == 200) {
+                if (res.status === 200) {
                     setResponse("Updated successfully!");
                     sessionStorage.setItem("username", res.data.username);
                     sessionStorage.setItem("Email", res.data.email);

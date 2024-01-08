@@ -49,7 +49,7 @@ const Movie = ({ movie, databaseData }) => {
                         }
                     }
                 ).then(res => {
-                    if (res.status == 200) {
+                    if (res.status === 200) {
                         setWatched(true);
                         fetchMyMovies();
                         setAddMovieButtonText("Added");
@@ -96,7 +96,7 @@ const Movie = ({ movie, databaseData }) => {
     // Goes through all the movies from the database and if the movie given to this Movie element is in there, sets the state of watched to true.
     useEffect(() => {
         if (sessionStorage.getItem("userMovies")) {
-            const isMovieWatched = JSON.parse(sessionStorage.getItem("userMovies")).some(m => (m.title == movie.title && m.id == movie.id) || (m.title == movie.title && m.tmdbId == movie.id));
+            const isMovieWatched = JSON.parse(sessionStorage.getItem("userMovies")).some(m => (m.title === movie.title && m.id === movie.id) || (m.title === movie.title && m.tmdbId === movie.id.toString()));
             setWatched(isMovieWatched);
         }
     })
@@ -104,13 +104,13 @@ const Movie = ({ movie, databaseData }) => {
     // Goes through all the movies from the database and if the movie given to this Movie element is in there, sets the state of watched to true.
     useEffect(() => {
         if (sessionStorage.getItem("userMovies")) {
-            const isMovieWatched = JSON.parse(sessionStorage.getItem("userMovies")).some(m => (m.title == movie.title && m.id == movie.id) || (m.title == movie.title && m.tmdbId == movie.id));
+            const isMovieWatched = JSON.parse(sessionStorage.getItem("userMovies")).some(m => (m.title === movie.title && m.id === movie.id) || (m.title === movie.title && m.tmdbId === movie.id.toString()));
             setWatched(isMovieWatched);
         }
     }, [sessionStorage.getItem("userMovies")])
 
     useEffect(() => {
-        if (addMovieButtonText == "Added") {
+        if (addMovieButtonText === "Added") {
             setWatched(true);
         }
     }, [addMovieButtonText])

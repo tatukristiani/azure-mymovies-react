@@ -57,7 +57,7 @@ const Register = () => {
             const account = { username: user, password: EncodeToBase64(pwd), email: email };
 
 
-            const response = await axios.post(
+            await axios.post(
                 MyMoviesAPI.registerURL(),
                 account,
                 {
@@ -66,7 +66,7 @@ const Register = () => {
                     }
                 }).then(res => {
                     console.log(res);
-                    if (res.status == 200) {
+                    if (res.status === 200) {
                         sessionStorage.setItem("username", res.data.username);
                         sessionStorage.setItem("id", res.data.id);
                         sessionStorage.setItem("email", res.data.email);

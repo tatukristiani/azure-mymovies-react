@@ -54,7 +54,7 @@ const MovieDetails = () => {
                 }
             ).then(res => {
                 console.log("RES: " + res);
-                if (res.status == 200) {
+                if (res.status === 200) {
                     setWatched(true);
                     fetchMyMovies();
                 }
@@ -71,7 +71,7 @@ const MovieDetails = () => {
     const handleRemoveMovie = async () => {
         await axiosOwn.delete(MyMoviesAPI.deleteUserMovieURL(movie.id, sessionStorage.getItem("id"))).then(res => {
             console.log(res);
-            if (res.status == 200) {
+            if (res.status === 200) {
                 setWatched(false);
                 fetchMyMovies();
             }
@@ -109,7 +109,7 @@ const MovieDetails = () => {
 
     useEffect(() => {
         if (sessionStorage.getItem("userMovies")) {
-            const isMovieWatched = JSON.parse(sessionStorage.getItem("userMovies")).some(m => m.title == movie.title && m.tmdbId == movie.id);
+            const isMovieWatched = JSON.parse(sessionStorage.getItem("userMovies")).some(m => m.title === movie.title && m.tmdbId === movie.id.toString());
             setWatched(isMovieWatched);
         }
     }, [sessionStorage.getItem("userMovies"), movie]);

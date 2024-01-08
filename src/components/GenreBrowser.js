@@ -1,7 +1,7 @@
 import Genres from "../utility/Genres";
-import {Link, useParams} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import '../styles/GenreBrowser.css';
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import React from 'react';
 
 /**
@@ -11,23 +11,23 @@ import React from 'react';
  */
 const GenreBrowser = () => {
     const [genre, setGenre] = useState(''); // Current genres state
-    const {code} = useParams(); // Used from url parameter, change of code means that the user wants to see another movies.
+    const { code } = useParams(); // Used from url parameter, change of code means that the user wants to see another movies.
 
     // Everytime code or genre changes, checks the current genre and sets the genre state accordingly.
     useEffect(() => {
         const checkCurrentGenre = () => {
-            if(code == undefined) {
+            if (code === undefined) {
                 setGenre('Trending');
             } else {
-                if (code == Genres.ACTION) {
+                if (code === Genres.ACTION) {
                     setGenre('Action');
-                } else if (code == Genres.ROMANCE) {
+                } else if (code === Genres.ROMANCE) {
                     setGenre('Romance');
-                } else if (code == Genres.DOCS) {
+                } else if (code === Genres.DOCS) {
                     setGenre('Documentaries');
-                } else if (code == Genres.HORROR) {
+                } else if (code === Genres.HORROR) {
                     setGenre('Horror');
-                } else if (code == Genres.COMEDY) {
+                } else if (code === Genres.COMEDY) {
                     setGenre('Comedy');
                 }
             }
@@ -35,7 +35,7 @@ const GenreBrowser = () => {
         checkCurrentGenre();
     }, [code, genre]);
 
-    return(
+    return (
         <>
             <div className='genre-container'>
                 <ul className='genre-list'>
