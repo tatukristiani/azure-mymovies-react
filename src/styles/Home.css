@@ -45,3 +45,16 @@
         max-height: 200px;
     }
 }
+
+
+@media screen and (max-width: 330px) {
+    .movie-image {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 262px) {
+    .movie-image {
+        height: 100px;
+    }
+}

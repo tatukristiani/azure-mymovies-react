@@ -20,6 +20,7 @@ h1 {
     padding: 64px 15px 24px;
     margin: 0 auto;
 }
+
 .form .control {
     margin: 0 0 5px;
 }
@@ -34,10 +35,13 @@ h1 {
     letter-spacing: 0.05em;
     font-size: 16px;
 }
-.form .control input:hover, .form .control input:focus {
+
+.form .control input:hover,
+.form .control input:focus {
     outline: none;
     border: 0;
 }
+
 .form .btn {
     width: 100%;
     display: block;
@@ -56,6 +60,7 @@ h1 {
 .block-cube {
     position: relative;
 }
+
 .block-cube .bg-top {
     position: absolute;
     height: 10px;
@@ -67,9 +72,11 @@ h1 {
     transform: skew(-45deg, 0);
     margin: 0;
 }
+
 .block-cube .bg-top .bg-inner {
     bottom: 0;
 }
+
 .block-cube .bg {
     position: absolute;
     left: 0;
@@ -79,6 +86,7 @@ h1 {
     background: #020024;
     background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
 }
+
 .block-cube .bg-right {
     position: absolute;
     background: #020024;
@@ -90,12 +98,15 @@ h1 {
     left: 100%;
     transform: skew(0, -45deg);
 }
+
 .block-cube .bg-right .bg-inner {
     left: 0;
 }
+
 .block-cube .bg .bg-inner {
     transition: all 0.2s ease-in-out;
 }
+
 .block-cube .bg-inner {
     background: #212121;
     position: absolute;
@@ -104,18 +115,24 @@ h1 {
     right: 2px;
     bottom: 2px;
 }
+
 .block-cube .text {
     position: relative;
     z-index: 2;
 }
+
 .block-cube.block-input input {
     position: relative;
     z-index: 2;
 }
-.block-cube.block-input input:focus ~ .bg-right .bg-inner, .block-cube.block-input input:focus ~ .bg-top .bg-inner, .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+
+.block-cube.block-input input:focus~.bg-right .bg-inner,
+.block-cube.block-input input:focus~.bg-top .bg-inner,
+.block-cube.block-input input:focus~.bg-inner .bg-inner {
     top: 100%;
     background: rgba(255, 255, 255, 0.5);
 }
+
 .block-cube.block-input .bg-top,
 .block-cube.block-input .bg-right,
 .block-cube.block-input .bg {
@@ -123,18 +140,23 @@ h1 {
     transition: background 0.2s ease-in-out;
 
 }
+
 .block-cube.block-input .bg-right .bg-inner,
 .block-cube.block-input .bg-top .bg-inner {
     transition: all 0.2s ease-in-out;
 }
+
 .block-cube.block-input:focus .bg-top,
 .block-cube.block-input:focus .bg-right,
-.block-cube.block-input:focus .bg, .block-cube.block-input:hover .bg-top,
+.block-cube.block-input:focus .bg,
+.block-cube.block-input:hover .bg-top,
 .block-cube.block-input:hover .bg-right,
 .block-cube.block-input:hover .bg {
     background: rgba(255, 255, 255, 0.8);
 }
-.block-cube.block-cube-hover:focus .bg .bg-inner, .block-cube.block-cube-hover:hover .bg .bg-inner {
+
+.block-cube.block-cube-hover:focus .bg .bg-inner,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
     top: 100%;
 }
 
@@ -143,7 +165,8 @@ h1 {
     color: red;
 }
 
-.register-link, .forgot-link {
+.register-link,
+.forgot-link {
     margin-top: 15px;
     justify-content: center;
 }
@@ -158,3 +181,8 @@ h1 {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 366px) {
+    .form {
+        width: 100%;
+    }
+}

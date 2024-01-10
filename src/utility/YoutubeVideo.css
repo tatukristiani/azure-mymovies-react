@@ -1,30 +1,76 @@
-
 @media screen and (max-width: 960px) {
     .video-responsive iframe {
         left: 0;
         top: 0;
         height: 300px;
         width: 530px;
-     }
+    }
 }
 
 @media screen and (max-width: 650px) {
     .video-responsive iframe {
         left: 0;
         top: 0;
-        height: 230px;
-        width: 400px;
+        height: 181px;
+        width: 318px;
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
     .video-responsive iframe {
         left: 0;
         top: 0;
-        height: 180px;
-        width: 290px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .video-responsive iframe {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .video-responsive iframe {
+        left: 0;
+        top: 0;
+    }
+}
+
+
+@media screen and (max-width: 340px) {
+    .video-responsive iframe {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 316px) {
+    .video-responsive iframe {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .movie-details-image {
+        width: 10rem;
     }
 }
 
 
 
+@media screen and (max-width: 300px) {
+    .video-responsive iframe {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

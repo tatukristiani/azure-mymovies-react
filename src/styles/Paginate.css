@@ -21,7 +21,7 @@
     margin-left: -1px;
 }
 
-li.page-item.active > a {
+li.page-item.active>a {
     background-color: #0d6efd;
     color: white;
 }
@@ -35,3 +35,10 @@ li.page-item.active > a {
     justify-content: center;
 }
 
+@media screen and (max-width: 405px) {
+    .pagination {
+        flex-direction: column;
+        width: 70%;
+        margin: 15%;
+    }
+}

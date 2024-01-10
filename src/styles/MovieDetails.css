@@ -4,7 +4,7 @@
 }
 
 .video-container {
-    margin: 50px;
+    margin: 30px;
     text-align: center;
 }
 
@@ -37,13 +37,13 @@ p {
     .movie-detail-container {
         flex-direction: column;
     }
-    .image-container, .movie-details {
+
+    .image-container,
+    .movie-details {
         align-self: center;
     }
+
     .movie-details {
         text-align: center;
     }
 }
-
-
-

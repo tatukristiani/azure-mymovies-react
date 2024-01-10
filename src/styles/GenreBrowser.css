@@ -47,3 +47,15 @@
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .home-container {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .home-container {
+        gap: 0;
+    }
+}
