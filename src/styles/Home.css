@@ -1,60 +1,41 @@
 .home-container {
+    position: relative;
+    height: 80vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: white;
 }
 
-.movie-image {
-    object-fit: contain;
-    max-height: 350px;
-    border: solid 1px darkred;
-    transition: transform 300ms;
-    margin: 15px;
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
 }
 
-.movie-image-seen {
-    object-fit: contain;
-    max-height: 350px;
-    border: solid 1px green;
-    transition: transform 300ms;
-    margin: 15px;
+.home-container h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    margin: 50px;
 }
 
-.movie-image:hover,
-.movie-image-seen:hover {
-    transform: scale(1.05, 1.05);
-    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px, rgb(0 0 0 / 72%) 0px 30px 22px -10px;
-    transition-property: transform, box-shadow;
+.home-container button {
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
 
-@media screen and (max-width: 960px) {
-    /*
-    .home-container {
-        flex-wrap: nowrap;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        padding: 20px;
+@media screen and (max-width: 550px) {
+
+
+    .home-container h1 {
+        font-size: 20px;
     }
 
-     */
-
-    .movie-image,
-    .movie-image-seen {
-        max-height: 200px;
-    }
-}
-
-
-@media screen and (max-width: 330px) {
-    .movie-image {
-        height: 150px;
-    }
-}
-
-@media screen and (max-width: 262px) {
-    .movie-image {
-        height: 100px;
-    }
 }

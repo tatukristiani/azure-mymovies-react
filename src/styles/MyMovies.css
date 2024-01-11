@@ -2,3 +2,24 @@
     margin: 75px;
     text-align: center;
 }
+
+.my-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .my-movies {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .my-movies img {
+        height: 100px;
+    }
+}

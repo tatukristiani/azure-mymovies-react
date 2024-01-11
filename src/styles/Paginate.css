@@ -37,8 +37,6 @@ li.page-item.active>a {
 
 @media screen and (max-width: 405px) {
     .pagination {
-        flex-direction: column;
-        width: 70%;
         margin: 15%;
     }
 }

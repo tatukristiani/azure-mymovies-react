@@ -16,8 +16,8 @@ const Paginate = ({ onPageChange }) => {
             nextLabel={'>'}
             breakLabel={'...'}
             pageCount={100}
-            marginPagesDisplayed={3}
-            pageRangeDisplayed={4}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={2}
             onPageChange={onPageChange}
             containerClassName={'pagination'}
             pageClassName={'page-item'}

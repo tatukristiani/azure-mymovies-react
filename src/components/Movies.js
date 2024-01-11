@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
-import "../styles/Home.css";
 import Movie from "./Movie";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import '../styles/Movies.css';
 import Paginate from "./Paginate";
 import MyMoviesAPI from '../api/MyMoviesAPI';
@@ -16,30 +15,31 @@ import axios from '../api/axios';
 const Movies = () => {
     const [movies, setMovies] = useState([]);
     const { code } = useParams();
-    const [currentPage, setCurrentPage] = useState(1);
+    const { page } = useParams();
+    const navigate = useNavigate();
 
     const handlePageClick = (data) => {
-        setCurrentPage(data.selected + 1);
+        navigate(`/movies/${code}/${data.selected + 1}`);
+        window.scrollTo({ top: 0 });
     }
 
     const fetchMovies = async () => {
-        await axios.get(MyMoviesAPI.getGenreURL(code, currentPage)).then(res => {
+        const url = code === "trending" ? MyMoviesAPI.getTrendingURL(page) : MyMoviesAPI.getGenreURL(code, page);
+        await axios.get(url).then(res => {
             console.log(res);
             setMovies(res.data);
         })
+
     }
-    useEffect(() => {
-        fetchMovies();
-    }, [currentPage])
 
     useEffect(() => {
         fetchMovies();
-    }, [code])
+    }, [code, page])
 
     return (
         <>
             <div>
-                <div className="home-container">
+                <div className="movies-container">
                     {movies.map((movie => (
                         <Movie key={movie.id} movie={movie} databaseData={false} />
                     )))}

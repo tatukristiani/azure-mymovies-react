@@ -7,7 +7,7 @@ import validatePassword from "../utility/validatePassword";
 import MyMoviesAPI from '../api/MyMoviesAPI';
 import axios from "../api/axios";
 import EncodeToBase64 from '../utility/Encoder';
-
+import { Tooltip } from 'react-tooltip';
 
 const USER_ERROR = "Invalid username format!";
 const PASS_ERROR = "Invalid password format!";
@@ -109,6 +109,20 @@ const Login = () => {
                 <div className='control'>
                     <h1>
                         Sign In
+                        {errMsg ? (
+                            <>
+                                <a
+                                    style={{ color: "darkred" }}
+                                    data-tooltip-id='tooltip-anchor'
+                                    data-tooltip-content="Database could be sleeping just try again."
+                                    data-tooltip-variant='info'
+                                    data-tooltip-delay-show="100"
+                                    data-tooltip-delay-hide="100"
+                                > {"not working (?)"}</a>
+                                <Tooltip id="tooltip-anchor" />
+                            </>
+                        ) : (<></>)
+                        }
                     </h1>
                 </div>
                 <div className='control block-cube block-input'>

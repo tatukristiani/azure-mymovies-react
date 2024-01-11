@@ -25,23 +25,25 @@ const MyMovies = () => {
     return (
         <div className='movies-container'>
             {sessionStorage.getItem("username") ? (
-                <div className='movies'>
+                <>
                     <h1 className='my-movies-header'>{convertMinutesToString(totalTime)}</h1>
-                    <h1 className='my-movies-header'>Total movies watched:
+                    <h1 className='my-movies-header'>{"Total movies watched: "}
                         {
                             sessionStorage.getItem("userMovies") != null ?
                                 (JSON.parse(sessionStorage.getItem("userMovies")).length) : (" 0")
                         }
                     </h1>
-                    {
-                        sessionStorage.getItem("userMovies") != null ?
-                            (
-                                JSON.parse(sessionStorage.getItem("userMovies")).map((movie => (
-                                    <Movie key={movie.id} movie={movie} databaseData={true} />
-                                )))
-                            ) : ("")
-                    }
-                </div>
+                    <div className='my-movies'>
+                        {
+                            sessionStorage.getItem("userMovies") != null ?
+                                (
+                                    JSON.parse(sessionStorage.getItem("userMovies")).map((movie => (
+                                        <Movie key={movie.id} movie={movie} databaseData={true} />
+                                    )))
+                                ) : ("")
+                        }
+                    </div>
+                </>
             ) : (
                 <h1 className='my-movies-header'>You must be Signed In to view your movies.</h1>
             )

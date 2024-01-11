@@ -63,7 +63,7 @@ const Navbar = () => {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/movies/trending/1' className='nav-links' onClick={closeMobileMenu}>
                                 Browse
                             </Link>
                         </li>
@@ -86,7 +86,7 @@ const Navbar = () => {
                         }
                         <li className='nav-item'>
                             {sessionStorage.getItem("username") ? (
-                                <Link to='/' className='nav-links-mobile' onClick={logout}>Logout</Link>
+                                <Link to='/movies/trending/1' className='nav-links-mobile' onClick={logout}>Logout</Link>
                             ) : (
                                 <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>Sign In</Link>
                             )}

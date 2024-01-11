@@ -23,7 +23,7 @@ import ProfilePage from "./components/ProfilePage";
 const App = () => {
 
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         <Navbar />
         <div className='content'>
@@ -35,7 +35,7 @@ const App = () => {
             <Route exact path='/search' element={<Search />} />
             <Route exact path='/register' element={<Register />} />
             <Route exact path='/forgot-password' element={<ForgotPassword />} />
-            <Route exact path='/movies/genre/:code' element=
+            <Route exact path='/movies/:code/:page' element=
               {
                 <>
                   <GenreBrowser />
@@ -44,10 +44,7 @@ const App = () => {
               } />
             <Route path='/' element=
               {
-                <>
-                  <GenreBrowser />
-                  <Home />
-                </>
+                <Home />
               } />
           </Routes>
         </div>
