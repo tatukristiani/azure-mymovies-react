@@ -131,7 +131,7 @@ const Register = () => {
 
     useEffect(() => {
         if (accountCreated) {
-            navigate("/")
+            navigate("/movies/trending/1")
         }
     }, [accountCreated])
 

@@ -53,7 +53,7 @@ const Login = () => {
                         await axios.get(MyMoviesAPI.getMyMoviesURL(res.data.id)).then(res => {
                             console.log(res);
                             sessionStorage.setItem("userMovies", JSON.stringify(res.data));
-                            navigate("/");
+                            navigate("/movies/trending/1");
                         })
                     };
                     request();
