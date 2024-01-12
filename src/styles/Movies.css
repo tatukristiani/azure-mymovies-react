@@ -2,17 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
+}
+
+.movies-container .btn {
+    width: 170px;
+}
+
+.movie-add-button-container .btn {
+    margin-bottom: 30px;
 }
 
 .movies-not-found {
     text-align: center;
     margin: 40px;
     font-size: 40px;
-}
-
-.movie-add-button-container .btn::before {
-    content: "Add to My Movies";
 }
 
 .movie-image {
@@ -45,18 +48,7 @@
     .movie-image-seen {
         max-height: 200px;
     }
-}
 
-
-@media screen and (max-width: 410px) {
-
-    .movie-image,
-    .movie-image-seen {
-        height: 100px;
-    }
-}
-
-@media screen and (max-width: 960px) {
     .movie-add-button-container {
         width: 0;
     }
@@ -69,7 +61,26 @@
 }
 
 
+
+@media screen and (max-width: 507px) {
+
+    .movie-image,
+    .movie-image-seen {
+        max-height: 160px;
+    }
+
+    .movie-add-button-container .btn {
+        width: 72px;
+    }
+}
+
 @media screen and (max-width: 410px) {
+
+    .movie-image,
+    .movie-image-seen {
+        height: 100px;
+    }
+
     .movie-add-button-container {
         width: 0;
         margin-left: 3px;
@@ -77,12 +88,8 @@
     }
 
     .movie-add-button-container .btn {
-        width: 55px;
+        width: 57px;
         font-size: 8px;
         height: 27px;
-    }
-
-    .movie-add-button-container .btn::before {
-        content: "Add";
     }
 }

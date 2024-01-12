@@ -26,13 +26,15 @@ const MyMovies = () => {
         <div className='movies-container'>
             {sessionStorage.getItem("username") ? (
                 <>
-                    <h1 className='my-movies-header'>{convertMinutesToString(totalTime)}</h1>
-                    <h1 className='my-movies-header'>{"Total movies watched: "}
-                        {
-                            sessionStorage.getItem("userMovies") != null ?
-                                (JSON.parse(sessionStorage.getItem("userMovies")).length) : (" 0")
-                        }
-                    </h1>
+                    <div className='movie-watched-info-container'>
+                        <h1 className='my-movies-header'>{convertMinutesToString(totalTime)}</h1>
+                        <h1 className='my-movies-header'>{"Total Movies: "}
+                            {
+                                sessionStorage.getItem("userMovies") != null ?
+                                    (JSON.parse(sessionStorage.getItem("userMovies")).length) : (" 0")
+                            }
+                        </h1>
+                    </div>
                     <div className='my-movies'>
                         {
                             sessionStorage.getItem("userMovies") != null ?

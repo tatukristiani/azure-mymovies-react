@@ -10,6 +10,10 @@
     gap: 20px;
 }
 
+.movie-watched-info-container {
+    width: 100%;
+}
+
 
 
 @media screen and (max-width: 960px) {

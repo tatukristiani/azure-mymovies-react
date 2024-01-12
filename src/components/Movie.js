@@ -20,7 +20,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
  */
 const Movie = ({ movie, databaseData }) => {
     const [watched, setWatched] = useState(false); // Determines if the movie is on the users database.
-    const [addMovieButtonText, setAddMovieButtonText] = useState("");
+    const [addMovieButtonText, setAddMovieButtonText] = useState("Add");
 
     const addMovie = async () => {
         setAddMovieButtonText("Adding...");

@@ -30,11 +30,11 @@ const App = () => {
           <Routes>
             <Route exact path='/profile' element={<ProfilePage />} />
             <Route exact path='/movies' element={<MyMovies />} />
-            <Route exact path='/movies/:id' element={<MovieDetails />} />
-            <Route exact path='/login' element={<Login />} />
             <Route exact path='/search' element={<Search />} />
+            <Route exact path='/login' element={<Login />} />
             <Route exact path='/register' element={<Register />} />
             <Route exact path='/forgot-password' element={<ForgotPassword />} />
+            <Route exact path='/movies/:id' element={<MovieDetails />} />
             <Route exact path='/movies/:code/:page' element=
               {
                 <>

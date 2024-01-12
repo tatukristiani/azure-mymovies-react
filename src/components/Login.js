@@ -114,7 +114,7 @@ const Login = () => {
                                 <a
                                     style={{ color: "darkred" }}
                                     data-tooltip-id='tooltip-anchor'
-                                    data-tooltip-content="Database could be sleeping just try again."
+                                    data-tooltip-content="Try again, trust me :)"
                                     data-tooltip-variant='info'
                                     data-tooltip-delay-show="100"
                                     data-tooltip-delay-hide="100"

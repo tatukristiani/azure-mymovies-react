@@ -45,7 +45,7 @@ const Movies = () => {
                     )))}
                 </div>
                 <div className='paginate-container'>
-                    <Paginate onPageChange={handlePageClick} />
+                    <Paginate onPageChange={handlePageClick} currentPage={page} />
                 </div>
             </div>
         </>

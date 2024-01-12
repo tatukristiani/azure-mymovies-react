@@ -8,7 +8,7 @@ import React from "react";
  * @returns {JSX.Element} ReactPaginate component with some hardcoded attributes except the onPageChange.
  * @constructor Creates Paginate component which is really a Reacts ReactPaginate.
  */
-const Paginate = ({ onPageChange }) => {
+const Paginate = ({ onPageChange, currentPage }) => {
 
     return (
         <ReactPaginate
@@ -29,6 +29,7 @@ const Paginate = ({ onPageChange }) => {
             breakClassName={'page-item'}
             breakLinkClassName={'page-link'}
             activeClassName={'active'}
+            forcePage={parseInt(currentPage - 1)}
         />
     )
 }
