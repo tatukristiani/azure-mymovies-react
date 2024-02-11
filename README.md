@@ -21,7 +21,7 @@ The application provides information about how many movies you've seen so far (a
     - React.js
     - Hosted at Azure
 ## Database
-    - Azure SQL Server
+    - Azure SQL Database
 
 Azure DevOps was also used during the development and later on CI/CD pipelines will be added (for educational purposes).
 
