@@ -17,15 +17,18 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-  
+- task: Npm@1
+  inputs:
+    command: 'install'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run build'
+
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure subscription 1(29ab5faf-90a7-4d8c-9f5c-6c83f5d566e9)'
     appType: 'webApp'
     appName: 'mymovieonline'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(System.DefaultWorkingDirectory)/1/s/'
     deploymentMethod: 'auto'
