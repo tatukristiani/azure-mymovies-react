@@ -17,13 +17,10 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- task: Npm@1
-  inputs:
-    command: 'install'
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    customCommand: 'run build'
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
 
 - task: AzureWebApp@1
   inputs:
