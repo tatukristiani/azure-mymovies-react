@@ -27,5 +27,5 @@ steps:
     azureSubscription: 'Azure subscription 1(29ab5faf-90a7-4d8c-9f5c-6c83f5d566e9)'
     appType: 'webApp'
     appName: 'mymovieonline'
-    package: '$(System.DefaultWorkingDirectory)/1/s/'
+    package: '$(System.DefaultWorkingDirectory)'
     deploymentMethod: 'auto'
