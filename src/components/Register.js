@@ -66,7 +66,6 @@ const Register = () => {
                         'Content-Type': 'application/json'
                     }
                 }).then(res => {
-                    console.log(res);
                     if (res.status === 200) {
                         sessionStorage.setItem("username", res.data.username);
                         sessionStorage.setItem("id", res.data.id);

@@ -67,7 +67,6 @@ const ProfilePage = () => {
             await axios.put(MyMoviesAPI.updateUserURL(), data, {
                 headers: { 'Content-Type': 'application/json' }
             }).then(res => {
-                console.log(res);
                 if (res.status === 200) {
                     setResponse("Updated successfully!");
                     sessionStorage.setItem("username", res.data.username);

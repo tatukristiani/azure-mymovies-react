@@ -26,7 +26,6 @@ const Movies = () => {
     const fetchMovies = async () => {
         const url = code === "trending" ? MyMoviesAPI.getTrendingURL(page) : MyMoviesAPI.getGenreURL(code, page);
         await axios.get(url).then(res => {
-            console.log(res);
             setMovies(res.data);
         })
 

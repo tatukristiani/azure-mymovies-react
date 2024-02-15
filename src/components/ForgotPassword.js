@@ -68,7 +68,6 @@ const ForgotPassword = () => {
     const sendUpdatedPassword = async () => {
         if (password === confirmPassword && validateCredential(password)) {
             await axios.put(MyMoviesAPI.resetPasswordURL(id, EncodeToBase64(password))).then(res => {
-                console.log(res);
                 if (res.status === 200) {
                     setUpdateResponse(res.data + " " + WAIT_STRING);
                 } else {

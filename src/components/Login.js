@@ -51,7 +51,6 @@ const Login = () => {
                         sessionStorage.setItem("username", res.data.username);
 
                         await axios.get(MyMoviesAPI.getMyMoviesURL(res.data.id)).then(res => {
-                            console.log(res);
                             sessionStorage.setItem("userMovies", JSON.stringify(res.data));
                             navigate("/movies/trending/1");
                         })

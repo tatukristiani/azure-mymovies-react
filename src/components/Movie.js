@@ -55,11 +55,8 @@ const Movie = ({ movie, databaseData }) => {
                         setAddMovieButtonText("Added");
                     }
                 }).catch(e => {
-                    console.log("Error: " + e);
                 })
 
-            } else {
-                console.log("Movie data was not valid!")
             }
         })
     }
@@ -82,7 +79,7 @@ const Movie = ({ movie, databaseData }) => {
             }
             return data;
         } catch (err) {
-            console.log(err);
+            console.log("Fetching movie details failed.");
         }
     }
 

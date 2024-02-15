@@ -27,7 +27,6 @@ const Search = () => {
     const handleSearch = async (e) => {
         if (e.key === 'Enter' || e.target.tagName.toLowerCase() === 'i') {
             await axios.get(MyMoviesAPI.searchMovieURL(search)).then(res => {
-                console.log(res.data);
                 if (res.data.length >= 1) {
                     setSearched(true);
                     let resultsArray = res.data.filter(function (movie) {

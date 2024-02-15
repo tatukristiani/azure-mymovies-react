@@ -7,11 +7,10 @@ import axios from "../api/axios";
  */
 export default async function FetchMovies(url) {
     let movies = [];
-    let request = await axios.get(url).then(res => {
-        console.log(res.data);
+    await axios.get(url).then(res => {
         movies = res.data;
         return movies;
-    }).catch(execption => {
-        console.log(execption);
+    }).catch(() => {
+        console.log("Error while fetching movies from API.");
     })
 }
