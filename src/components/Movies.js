@@ -31,6 +31,8 @@ const Movies = () => {
 
     }
 
+    const uniqueId = (prefix = 'id-') => prefix + Math.random().toString(16).slice(-4);
+
     useEffect(() => {
         fetchMovies();
     }, [code, page])
@@ -40,7 +42,7 @@ const Movies = () => {
             <div>
                 <div className="movies-container">
                     {movies.map((movie => (
-                        <Movie key={movie.id} movie={movie} databaseData={false} />
+                        <Movie key={uniqueId(movie.id)} movie={movie} databaseData={false} />
                     )))}
                 </div>
                 <div className='paginate-container'>

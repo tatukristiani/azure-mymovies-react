@@ -12,6 +12,8 @@ import '../styles/MyMovies.css';
 const MyMovies = () => {
     const [totalTime, setTotalTime] = useState(0); // Total time spent on movies.
 
+    const uniqueId = (prefix = 'id-') => prefix + Math.random().toString(16).slice(-4);
+
     useEffect(() => {
         if (sessionStorage.getItem("userMovies")) {
             let totalRuntimeCount = 0;
@@ -40,7 +42,7 @@ const MyMovies = () => {
                             sessionStorage.getItem("userMovies") != null ?
                                 (
                                     JSON.parse(sessionStorage.getItem("userMovies")).map((movie => (
-                                        <Movie key={movie.id} movie={movie} databaseData={true} />
+                                        <Movie key={uniqueId(movie.id)} movie={movie} databaseData={true} />
                                     )))
                                 ) : ("")
                         }
