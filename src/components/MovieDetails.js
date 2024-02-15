@@ -28,7 +28,6 @@ const MovieDetails = () => {
     // Handles adding the movie to the users database.
     const handleAddMovie = async () => {
         // Confirm that we have actual data to send.
-        console.log("Movie: " + movie);
         if (movie != null && movie.title) {
             console.log("MOVIE NOT NULL");
             const dataToAPI = {
@@ -42,9 +41,6 @@ const MovieDetails = () => {
                 genres: convertJson(movie.genres)
             };
 
-            console.log(JSON.stringify(dataToAPI));
-            console.log(localStorage.getItem("id"));
-
             await axiosOwn.post(
                 MyMoviesAPI.addNewMovieForUserURL(sessionStorage.getItem("id")),
                 dataToAPI,
@@ -54,13 +50,12 @@ const MovieDetails = () => {
                     }
                 }
             ).then(res => {
-                console.log("RES: " + res);
                 if (res.status === 200) {
                     setWatched(true);
                     fetchMyMovies();
                 }
             }).catch(e => {
-                console.log("Error: " + e);
+                console.log("Adding movie failed.");
             })
 
         } else {
@@ -71,7 +66,6 @@ const MovieDetails = () => {
     // Handles the removal of the movie from the database.
     const handleRemoveMovie = async () => {
         await axiosOwn.delete(MyMoviesAPI.deleteUserMovieURL(movie.id, sessionStorage.getItem("id"))).then(res => {
-            console.log(res);
             if (res.status === 200) {
                 setWatched(false);
                 fetchMyMovies();
@@ -95,10 +89,9 @@ const MovieDetails = () => {
                 setTrailer(trailerKey);
 
                 const movieData = movieResponse.data;
-                console.log(movieData);
                 setMovie(movieData);
             } catch (err) {
-                console.log(err);
+                console.log("Movie details not found.");
             }
         };
 
