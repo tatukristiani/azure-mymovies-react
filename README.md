@@ -1,4 +1,4 @@
-# My Movies Websoftware project
+# My Movies Web Application Project
 
 Original website was built using React.js + Node.js, this is an updated version that uses .NET instead of Node.js and for hosting Azure Web Apps was used.
   
