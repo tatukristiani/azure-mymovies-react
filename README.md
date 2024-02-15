@@ -15,7 +15,7 @@ The application provides information about how many movies you've seen so far (a
 
 # Technicalities
 ## Backend - Github: [Github API](https://github.com/tatukristiani/azure-mymovies-api)
-    - .NET Wep App
+    - .NET Wep API
     - Hosted at Azure
 ## Frontend
     - React.js
