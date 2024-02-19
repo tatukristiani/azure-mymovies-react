@@ -49,7 +49,6 @@ const ForgotPassword = () => {
         setResetButtonDisabled(true);
         if (validateEmail(email)) {
             await axios.post(MyMoviesAPI.sendResetPasswordLinkURL(email)).then(res => {
-                console.log(res);
                 if (res.status === 200) {
                     setResponse(res.data);
                 } else {
@@ -70,12 +69,14 @@ const ForgotPassword = () => {
             await axios.put(MyMoviesAPI.resetPasswordURL(id, EncodeToBase64(password))).then(res => {
                 if (res.status === 200) {
                     setUpdateResponse(res.data + " " + WAIT_STRING);
+                    setTimeout(() => {
+                        navigate("/login");
+                    }, 5000);
                 } else {
                     setUpdateResponse(res.data);
                 }
-                setTimeout(() => {
-                    navigate("/login");
-                }, 5000);
+            }).catch(() => {
+                setUpdateResponse("Failed to reset password. The link might be expired, try to a again from 'Sign In'.");
             });
         } else if (validateCredential(password)) {
             setValidConfirmPassword(false);
@@ -140,7 +141,7 @@ const ForgotPassword = () => {
                             autoComplete='off'
                         />
                         {!validConfirmPassword && <p className='forgot-password-error'>Passwords don't match!</p>}
-                        <Button buttonStyle='btn--forgot' onClick={sendUpdatedPassword}>Change Password</Button>
+                        <Button to={`?id=${id}`} buttonStyle='btn--forgot' onClick={sendUpdatedPassword}>Change Password</Button>
                     </div>
                     <p className='server-response'>{updateResponse}</p>
                 </div>

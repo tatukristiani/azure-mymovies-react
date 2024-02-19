@@ -32,7 +32,8 @@ export const Button = ({
     onClick,
     buttonStyle,
     buttonSize,
-    disabled
+    disabled,
+    disableLink
 }) => {
     /**
      * Set the button style to first element in STYLES if there aren't any specified style.
@@ -49,15 +50,35 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
     return (
-        <Link to={to} className='btn-mobile'>
-            <button
-                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-                onClick={onClick}
-                type={type}
-                disabled={disabled}
-            >
-                {children}
-            </button>
-        </Link>
+        <>
+            {disableLink ?
+                (
+                    <>
+                        <button
+                            className={`btn ${checkButtonStyle} ${checkButtonSize} btn-mobile`}
+                            onClick={onClick}
+                            type={type}
+                            disabled={disabled}
+                        >
+                            {children}
+                        </button>
+                    </>
+
+                ) : (
+                    <>
+                        <Link to={to} className='btn-mobile'>
+                            <button
+                                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                                onClick={onClick}
+                                type={type}
+                                disabled={disabled}
+                            >
+                                {children}
+                            </button>
+                        </Link>
+                    </>
+                )}
+        </>
+
     );
 };

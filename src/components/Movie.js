@@ -90,6 +90,7 @@ const Movie = ({ movie, databaseData }) => {
         })
     }
 
+    /*
     // Goes through all the movies from the database and if the movie given to this Movie element is in there, sets the state of watched to true.
     useEffect(() => {
         if (sessionStorage.getItem("userMovies")) {
@@ -97,6 +98,7 @@ const Movie = ({ movie, databaseData }) => {
             setWatched(isMovieWatched);
         }
     })
+    */
 
     // Goes through all the movies from the database and if the movie given to this Movie element is in there, sets the state of watched to true.
     useEffect(() => {
@@ -145,7 +147,7 @@ const Movie = ({ movie, databaseData }) => {
                         />
                     }</Link>
                     {!watched && sessionStorage.getItem("username") ? (
-                        <div className="movie-add-button-container"><Button onClick={addMovie} buttonStyle='btn--outline'>{addMovieButtonText}</Button></div>
+                        <div className="movie-add-button-container"><Button disableLink={true} onClick={addMovie} buttonStyle='btn--outline'>{addMovieButtonText}</Button></div>
                     ) : (<></>)}
                 </div>
             )}
