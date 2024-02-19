@@ -147,7 +147,9 @@ const Movie = ({ movie, databaseData }) => {
                         />
                     }</Link>
                     {!watched && sessionStorage.getItem("username") ? (
-                        <div className="movie-add-button-container"><Button disableLink={true} onClick={addMovie} buttonStyle='btn--outline'>{addMovieButtonText}</Button></div>
+                        <div className="movie-add-button-container">
+                            <button onClick={addMovie} className='btn btn--outline btn--medium btn-mobile'>{addMovieButtonText}</button>
+                        </div>
                     ) : (<></>)}
                 </div>
             )}
