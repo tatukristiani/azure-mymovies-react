@@ -51,7 +51,7 @@ export const Button = ({
 
     return (
         <>
-            {disableLink ?
+            {disableLink == true ?
                 (
                     <>
                         <button
