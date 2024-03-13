@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { IKImage } from 'imagekitio-react';
 import "../styles/Movie.css";
-import { Button } from "../components/Button.js";
 import convertJson from "../utility/JsonConverter";
 import MyMoviesAPI from '../api/MyMoviesAPI.js';
 import axiosOwn from "../api/axios.js";
@@ -23,8 +22,6 @@ const Movie = ({ movie, databaseData }) => {
     const [addMovieButtonText, setAddMovieButtonText] = useState("Add");
 
     const addMovie = async () => {
-        console.log("Add movie button pressed");
-        console.log("Database data: " + databaseData);
         setAddMovieButtonText("Adding...");
         await fetchMovieDetails().then(async res => {
             const movieData = res.movieData;
@@ -91,16 +88,6 @@ const Movie = ({ movie, databaseData }) => {
             sessionStorage.setItem("userMovies", JSON.stringify(res.data));
         })
     }
-
-    /*
-    // Goes through all the movies from the database and if the movie given to this Movie element is in there, sets the state of watched to true.
-    useEffect(() => {
-        if (sessionStorage.getItem("userMovies")) {
-            const isMovieWatched = JSON.parse(sessionStorage.getItem("userMovies")).some(m => (m.title === movie.title && m.id === movie.id) || (m.title === movie.title && m.tmdbId === movie.id.toString()));
-            setWatched(isMovieWatched);
-        }
-    })
-    */
 
     // Goes through all the movies from the database and if the movie given to this Movie element is in there, sets the state of watched to true.
     useEffect(() => {
