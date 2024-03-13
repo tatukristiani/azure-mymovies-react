@@ -23,6 +23,8 @@ const Movie = ({ movie, databaseData }) => {
     const [addMovieButtonText, setAddMovieButtonText] = useState("Add");
 
     const addMovie = async () => {
+        console.log("Add movie button pressed");
+        console.log("Database data: " + databaseData);
         setAddMovieButtonText("Adding...");
         await fetchMovieDetails().then(async res => {
             const movieData = res.movieData;
