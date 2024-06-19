@@ -1,115 +1,115 @@
 .search-result-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 .search-value {
-    margin-top: 45px;
-    text-align: center;
-    font-size: 18px;
+  margin-top: 45px;
+  text-align: center;
+  font-size: 18px;
 }
 
 .search-error {
-    margin-top: 45px;
-    text-align: center;
-    font-size: 18px;
-    color: red;
+  margin-top: 45px;
+  text-align: center;
+  font-size: 18px;
+  color: red;
 }
 
 .search-result-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .search-result-container .btn {
-    width: 170px;
+  width: 170px;
 }
 
 .movie-add-button-container .btn {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .movies-not-found {
-    text-align: center;
-    margin: 40px;
-    font-size: 40px;
+  text-align: center;
+  margin: 40px;
+  font-size: 40px;
 }
 
 .movie-image {
-    object-fit: contain;
-    max-height: 350px;
-    border: solid 1px darkred;
-    transition: transform 300ms;
-    margin: 15px;
+  object-fit: contain;
+  max-height: 350px;
+  border: solid 1px darkred;
+  transition: transform 300ms;
+  margin: 15px;
 }
 
 .movie-image-seen {
-    object-fit: contain;
-    max-height: 350px;
-    border: solid 1px green;
-    transition: transform 300ms;
-    margin: 15px;
+  object-fit: contain;
+  max-height: 350px;
+  border: solid 1px green;
+  transition: transform 300ms;
+  margin: 15px;
 }
 
 .movie-image:hover,
 .movie-image-seen:hover {
-    transform: scale(1.05, 1.05);
-    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px, rgb(0 0 0 / 72%) 0px 30px 22px -10px;
-    transition-property: transform, box-shadow;
+  transform: scale(1.05, 1.05);
+  box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+    rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+  transition-property: transform, box-shadow;
 }
 
+.loader {
+  text-align: center;
+  margin: 100px;
+}
 
 @media screen and (max-width: 960px) {
+  .movie-image,
+  .movie-image-seen {
+    max-height: 200px;
+  }
 
-    .movie-image,
-    .movie-image-seen {
-        max-height: 200px;
-    }
+  .movie-add-button-container {
+    width: 0;
+  }
 
-    .movie-add-button-container {
-        width: 0;
-    }
-
-    .movie-add-button-container .btn {
-        width: 100px;
-        font-size: 12px;
-        margin-left: 17px;
-    }
+  .movie-add-button-container .btn {
+    width: 100px;
+    font-size: 12px;
+    margin-left: 17px;
+  }
 }
 
-
-
 @media screen and (max-width: 507px) {
+  .movie-image,
+  .movie-image-seen {
+    max-height: 160px;
+  }
 
-    .movie-image,
-    .movie-image-seen {
-        max-height: 160px;
-    }
-
-    .movie-add-button-container .btn {
-        width: 72px;
-    }
+  .movie-add-button-container .btn {
+    width: 72px;
+  }
 }
 
 @media screen and (max-width: 410px) {
+  .movie-image,
+  .movie-image-seen {
+    height: 100px;
+  }
 
-    .movie-image,
-    .movie-image-seen {
-        height: 100px;
-    }
+  .movie-add-button-container {
+    width: 0;
+    margin-left: 3px;
+    margin-top: -10px;
+  }
 
-    .movie-add-button-container {
-        width: 0;
-        margin-left: 3px;
-        margin-top: -10px;
-    }
-
-    .movie-add-button-container .btn {
-        width: 57px;
-        font-size: 8px;
-        height: 27px;
-    }
+  .movie-add-button-container .btn {
+    width: 57px;
+    font-size: 8px;
+    height: 27px;
+  }
 }

@@ -1,49 +1,59 @@
 .genre-container {
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+  padding-left: 100px;
+  align-items: end;
 }
 
 .genre-header {
-    margin-top: 20px;
+  margin-bottom: -17px;
 }
 
 .genre-list {
-    list-style: none;
-    margin-bottom: 30px;
-    width: 80%;
+  list-style: none;
 }
 
 .genre-item {
-    float: left;
-    margin: 10px;
+  float: left;
+  margin: 10px;
 }
 
 .genre-link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.568);
 }
 
 .genre-link:hover {
-    text-decoration: underline;
-    color: #0d6efd;
+  color: #ececec;
 }
 
 .active {
-    color: #0d6efd;
-    text-decoration: underline;
+  color: #ececec;
+  text-decoration: solid;
 }
 
 @media screen and (max-width: 960px) {
-    .genre-header {
-        display: none;
-    }
+  .genre-list {
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: space-evenly;
+  }
+}
 
-    .genre-list {
-        display: grid;
-        justify-items: start;
-        grid-template-columns: 100px 100px;
-        justify-content: center;
-    }
+@media screen and (max-width: 730px) {
+  .genre-header {
+    display: none;
+  }
+  .genre-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .genre-list {
+    grid-template-columns: 100px 100px;
+  }
 }
